@@ -1,0 +1,175 @@
+html{
+    background-color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0 auto;
+    width: 75%
+}
+body{
+    background-color: #ffffff;
+}
+nav, footer {
+    background-color: #000000;
+    color: #ffffff;
+}
+li,a{
+    display: inline-block;
+    list-style-type: none;
+    text-decoration: none;
+    margin-right: 1em;
+    color: #ffffff;
+}
+a:visited{
+    color:#ffffff
+}
+p {
+    font-size: 1.25em;
+}
+figcaption, label, input, small {
+    font-size: 1em;
+}
+nav a {
+    font-size: 1.5em;
+}
+h1 {
+    font-size: 3em;
+    color: #007d7b;
+}
+h2 {
+    font-size: 2em;
+    text-align: center;
+}
+.image{
+    z-index: 0;
+    position: relative;
+}
+figcaption{
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+.chile figcaption{
+    color:#ffffff;
+    margin-top: -30px;
+}
+.guat figcaption{
+    color: #ffffff;
+    margin-bottom: -30px;
+}
+.hawaii figcaption{
+    color: #ffffff;
+    margin-top: -30px;
+}
+.iran figcaption{
+    margin-bottom: -30px;
+}
+.ire figcaption{
+    margin-bottom: -30px;
+}
+.italy figcaption{
+    margin-top: -30px;
+    color:#ffffff;
+}
+.moab figcaption{
+    margin-top: -30px;
+    color: #ffffff;
+}
+.rocky figcaption, .swiss figcaption, .uk figcaption, .usa figcaption{
+    margin-bottom: -30px;
+}
+.wyo figcaption{
+    margin-top: -30px;
+    color: #ffffff;
+}
+.copyright {
+    text-align: center;
+    font-size: small;
+}
+footer p{
+    text-align: center;
+}
+nav form {
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+}
+input[type=text],input[type=email], textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px; 
+    box-sizing: border-box;
+    margin-top: 6px; 
+    margin-bottom: 16px; 
+    resize: vertical;
+}
+::placeholder{
+    color:#007d7b;
+    font-weight: bold;
+}
+.submit{
+    text-align: center;
+}
+input[type=submit] {
+    background-color: #007d7b;
+    color: #ffffff;
+    width: 75%;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+@media screen and (min-width:1300px) {
+    h1{
+        text-align: left;
+    }
+    ul {
+        text-align: right;
+    } 
+    img{
+        width: 100%;
+        height: 100%;
+    }
+    .figures{
+        display: grid;
+        grid-template-areas: 
+        "chile guat hawaii"
+        "iran ire italy"
+        "moab rocky swiss"
+        "uk usa wyo";
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-auto-rows: 1fr 2fr 1fr 1fr;
+        max-width: fit-content;
+    }
+}
+@media screen and (min-width:880px) {
+    h1{
+        text-align: left;
+    }
+    ul{
+        text-align: center;
+    }
+    .figures{
+        display:grid;
+        grid-template-areas: 
+        "chile guat"
+        "hawaii iran"
+        "ire italy"
+        "moab rocky"
+        "swiss uk"
+        "usa wyo";
+        grid-template-columns: auto auto;
+        grid-template-rows: 1fr 2fr 2fr 1fr 1fr 1fr;
+    }
+    .hawaii{
+        height:280px;
+    }
+}
+@media screen and (mid-width:485px) {
+    .figures{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
